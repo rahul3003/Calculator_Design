@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <title> Calculatoor </title>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="top-container">1</div>
+        <div class="display"></div>
+        <div class="button_container">
+            <div class="button funcation ac">AC</div>
+            <div class="button funcation pm">±</div>
+            <div class="button funcation per">%</div>
+            <div class="button operator divi">/÷</div>
+            <div class="button number-7">7</div>
+            <div class="button number-8">8</div>
+            <div class="button number-9">9</div>
+            <div class="button operator mul">×</div>
+            <div class="button number-4">4</div>
+            <div class="button number-5">5</div>
+            <div class="button number-6">6</div>
+            <div class="button operator sub">-</div>
+            <div class="button number-3">3</div>
+            <div class="button number-2">2</div>
+            <div class="button number-1">1</div>
+            <div class="button operator add">+</div>
+            <div class="button number-0">0</div>
+            <div class="button number-.">.</div>
+            <div class="button operator equ">=</div>
+        
+        </div>
+    </div> 
+    <script >
+
+    window.onload = function(){
+        let buttonContainer = document.querySelector(".button_container")
+        let display = document.querySelector(".display")
+        //let operator = document.querySelector(".operator")
+        buttonContainer.onclick= function(e){
+            if(e.target && e.target.classList.contains("button")){
+                let content = e.target.innerHTML.trim()
+                display.innerHTML += content
+            /*let numbers=content.split(/\D/g);
+            let op=content.split(/\d/g).filter(Boolean);
+            console.log(numbers);*/
+
+            }
+        }
+    }
+    
+    </script>  
+</body>
+</html>
